@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>login page</title>
+</head>
+<body bgColor="pink">
+<center>
+<h1>Login Page</h1>
+<form>
+username<input type="text" name="userid" id="userid"/><br><br>
+password<input type="password" name="pswrd"/><br>
+             <input type="button" onclick="check(this.form)" value="login"/>
+             <input type="reset" value="Reset"/>
+</form></center>
+<script language="javascript">
+var ck_username=/^[1A-ZA-Z0-90-9A-ZA-ZA-Z-0-9]{10}$/;
+var ck_pwd=/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+function check(form)
+{
+   var userid=form.userid.value;
+   var pwd=form.pswrd.value;    
+   if (!ck_username.test(userid) && !ck_pwd.test(pwd))
+ {
+  alert("Incorrect userid /pwd");
+ }
+
+else
+{
+   alert("Welcome to RVCE");
+var d=new Date();
+document.write(d);
+document.body.bgColor="pink";
+}
+}
+
+</script>
+</body>
+</html>
+                                                                                                        
