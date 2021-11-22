@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>convert </title>
+<script>
+function CreateTableFromJSON()
+ {
+    var students=[
+                                    {
+                                         "stud_ID"              :  "1RV20MCA040",
+                                          "stud_Name"          :     "rakshi",
+                                    "Major"              : "science",
+                                            "mobile"            :  "8774484839"
+
+                                   },
+                                    {
+                                         "stud_ID"           :  "1RV20MCA041",
+                                          "stud_Name"       : "chandu",
+                                           "Major"           : "compute",
+                                            "mobile"         :  "8774484839"
+
+                                   },
+                                   {
+                                         "stud_ID"           :  "1RV20MCA042",
+                                          "stud_Name"       : "pavana",
+                                           "Major"           : "computer ",
+                                            "mobile"         :  "8774484839"
+
+                                   }
+             ]
+var tableBody='<table border="1"><tr><td>Student-ID</td><td>Student Name</td><td>Major</td><td>Mobile</td></tr>'
+
+students.forEach(function(d)
+
+{
+  tableBody+='<tr><td>'+d.stud_ID+'</td><td>'+d.stud_Name+'</td><td>'+d.Major+'</td><td>'+d.mobile+'</td></tr>';
+});
+tableBody+='<table>' ;
+var divContainer=document.getElementById("showData");
+divContainer.innerHTML=tableBody;
+
+}
+</script>
+</head>
+<body>
+<input type="button" onclick="CreateTableFromJSON()"  value="Click  To Me" />
+<p id="showData"></p>
+</body>
+</html>
