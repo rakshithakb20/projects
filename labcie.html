@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<html>
+<head>
+   <title>login page</title>
+    <meta charset="UTF-8">
+</head>
+<body bgColor="pink">
+   <center>
+      <h1>LOGIN PAGE</h1>
+        <form>
+             username : <input type="text" name="userid" id="userid" /><br><br>
+            password  : <input type="password"  name="pwd"  /><br><br>
+                     <input type="button"  onclick="check(this.form)" value="login" />
+                     <input type="reset"  value="Reset"  />
+       </form>
+ </center>
+
+<script language="javascript">
+    var ck_username=/^[1A-ZA-Z0-90-9A-ZA-ZA-Z0-90-9]{10}$/;
+   var  ck_pwd=/^(?=.*\d)(?=.*[@#$%^&])(?=.*[a-z])(?=.*[A-Z]).{8, } $/;
+
+function check(form)
+  {
+       var userid=form.userid.value;
+       var pwd=form.pwd.value;
+           
+            if (!ck_username.test(userid)   &&   !ck_pwd.test(pwd))
+                 {
+                        alert("Invalid username / password");
+                 }
+            else
+                {
+                      alert("Welcome to RVCE");
+                       var d = new Date();
+                       document.write(d);
+                       document.body.bgColor="red";
+              }
+   }
+ 
+   </script>
+  </body>
+</html>             
+
+
+     
+
+
+
+
+ 
